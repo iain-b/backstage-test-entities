@@ -14,6 +14,8 @@ metadata:
     snyk.io/org-name: dtuite
     snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
     argocd/app-name: ibtest
+    aws.com/lambda-function-name: roadie-test-load-to-elastic
+    aws.com/lambda-region: eu-west-1
 spec:
   type: service
   owner: user:guest
