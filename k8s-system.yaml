@@ -4,6 +4,6 @@ metadata:
   name: k8s-cluster-iain # need a component to test the k8s plugin, system seems the best fit but needs more thought.
   description: My dev cluster
   annotations:
-    backstage.io/kubernetes-label-selector: 'app=backstage'
+    backstage.io/kubernetes-label-selector: 'app=guestbook-ui'
 spec:
   owner: team-a
