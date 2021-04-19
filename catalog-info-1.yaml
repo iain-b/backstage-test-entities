@@ -16,7 +16,7 @@ metadata:
     argocd/app-name: ibtest
     aws.com/lambda-function-name: roadie-test-load-to-elastic
     aws.com/lambda-region: eu-west-1
-    jira/project-key: TEST
+    jira/project-key: IB
 spec:
   type: service
   owner: user:guest
