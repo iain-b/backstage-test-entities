@@ -19,7 +19,6 @@ metadata:
     jira/project-key: IB
 spec:
   type: service
-  owner: user:guest
   lifecycle: experimental
   implementsApis:
     - sample-service
