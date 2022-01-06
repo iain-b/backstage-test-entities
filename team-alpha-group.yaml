@@ -13,24 +13,12 @@ spec:
   children: []
 ---
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: Location
 metadata:
-  name: breanna.davison
+  name: example-groups
+  description: A collection of all group existing in the roadie org
 spec:
-  profile:
-    # Intentional no displayName for testing
-    email: breanna-davison@example.com
-    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
-  memberOf: [team-alpha]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: janelle.dawe
-spec:
-  profile:
-    displayName: Janelle Dawe
-    email: janelle-dawe@example.com
-    picture: https://avatars.dicebear.com/api/avataaars/janelle-dawe@example.com.svg?background=%23fff
-  memberOf: [team-alpha]
+  targets:
+    - ./breanna-davison-user.yaml
+    - ./janelle.dawe-user.yaml
 
