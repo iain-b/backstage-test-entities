@@ -20,5 +20,4 @@ metadata:
 spec:
   targets:
     - ./breanna-davison-user.yaml
-    - ./janelle-dawe-user.yaml
 
