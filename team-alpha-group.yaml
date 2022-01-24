@@ -18,6 +18,5 @@ metadata:
   name: example-groups
   description: A collection of all group existing in the roadie org
 spec:
-  targets:
-    - ./janelle-dawe-user.yaml
+  targets:[]
 
