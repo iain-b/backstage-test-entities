@@ -7,6 +7,6 @@ metadata:
   annotations:
     github.com/project-slug: roadiehq/sample-service
 spec:
-  type: component
+  type: spring-app
   owner: user:iain-b
   lifecycle: experimental
