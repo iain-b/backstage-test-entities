@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibtest-bad-type
+  description: |
+    A service with an incorrect spec.type
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+spec:
+  type: component
+  owner: user:iain-b
+  lifecycle: experimental
