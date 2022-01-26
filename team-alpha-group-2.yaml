@@ -19,5 +19,5 @@ metadata:
   description: A collection of all group existing in the roadie org
 spec:
   targets:
-    - janelle-dawe-user.yaml
+    - ./users/janelle-dawe-user.yaml
 
