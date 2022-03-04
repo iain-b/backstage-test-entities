@@ -17,7 +17,7 @@ metadata:
     aws.com/lambda-function-name: roadie-test-load-to-elastic
     aws.com/lambda-region: eu-west-1
     jira/project-key: IB
-    grafana.com/tag-selector: integrations-ceph
+    grafana/tag-selector: integrations-ceph
 spec:
   type: service
   owner: user:guest
