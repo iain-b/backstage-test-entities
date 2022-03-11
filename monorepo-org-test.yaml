@@ -5,4 +5,4 @@ metadata:
   description: Testing
 spec:
   type: github-monorepo
-  target: https://github.com/RoadieHQ/?ignore=backstage-catalog-data
+  target: https://github.com/RoadieHQ
