@@ -5,4 +5,4 @@ metadata:
   description: Testing
 spec:
   type: github-monorepo
-  target: https://github.com/RoadieHQ
+  target: https://github.com/RoadieHQ/sample-split-monorepo?filename=backstage.yaml
