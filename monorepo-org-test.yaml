@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: monorepo-org-test
+  description: Testing
+spec:
+  type: github-monorepo
+  target: https://github.com/RoadieHQ/
