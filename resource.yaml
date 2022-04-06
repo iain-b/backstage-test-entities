@@ -1,0 +1,12 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: prod
+  title: testing
+spec:
+  type: cluster
+  lifecycle: production
+  owner: team-alpha
+  clusterData:
+    prod: true
