@@ -20,7 +20,7 @@ metadata:
     grafana/tag-selector: integrations-ceph
 spec:
   type: service
-  owner: user:guest
+  owner: user:iain-b
   lifecycle: experimental
   implementsApis:
     - sample-service
