@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: url-reader-test
+  title: testing url reader config
+  description: Testing url reader.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-alpha
+  definition:
+    $text: https://api.apis.guru/v2/specs/1password.com/events/1.0.0/openapi.yaml
