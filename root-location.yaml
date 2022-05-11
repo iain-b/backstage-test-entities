@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: example-groups
+  description: A collection of all group existing in the roadie org
+spec:
+  targets: 
+    - ./invalid-location.yaml
+    - ./valid-location.yaml
