@@ -6,5 +6,5 @@ metadata:
   description: A collection of all group existing in the roadie org
 spec:
   targets: 
-    - ./invalid-location.yaml
+    - ./corrected-location.yaml
     - ./valid-location.yaml
