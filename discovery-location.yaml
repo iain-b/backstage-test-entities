@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: discovery-test
+  description: Testing discovery
+spec:
+  type: github-discovery
+  target: https://github.com/iain-b/blob/-/root-location.yaml
