@@ -1,0 +1,16 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibtest-6
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+spec:
+  type: service
+  owner: user:iain-b
+  lifecycle: experimental
+  implementsApis:
+    - sample-service
