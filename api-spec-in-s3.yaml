@@ -3,7 +3,7 @@ kind: API
 metadata:
   name: api-spec-in-s3
   title: Api spec in S3
-  description: Testing api spec in s3 with aws s3 url reader.
+  description: Testing api spec in s3 with aws s3 url reader. test
 spec:
   type: openapi
   lifecycle: production
