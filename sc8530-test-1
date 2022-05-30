@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sc8530-test-3
+  name: sc8530-test-4
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
