@@ -1,5 +1,3 @@
-
-   
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
@@ -34,7 +32,12 @@ spec:
         description: 'This is a test'
         repoUrl: ${{ parameters.repoUrl }}
         defaultBranch: main
-
+        
+    - action: debug:log
+      name: log
+      id: log
+      intput:
+        message: ${{ steps.publish-repository.output.repoContentsUrl }}
 
     - action: catalog:register
       id: register-with-catalog
