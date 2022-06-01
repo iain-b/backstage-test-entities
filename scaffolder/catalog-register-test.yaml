@@ -8,39 +8,10 @@ metadata:
 spec:
   owner: iain@roadie.io
   type: service
-  parameters:
-    - title: Choose a location
-      required:
-        - repoUrl
-      properties: 
-        repoUrl:
-          title: Repository Location
-          type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
-            allowedOwners:
-              - iain-b
-              - RoadieHQ
+  parameters: {}
   steps:
-    - id: publish-repository
-      name: Publish
-      action: publish:github
-      input:
-        allowedHosts: ['github.com']
-        description: 'This is a test'
-        repoUrl: ${{ parameters.repoUrl }}
-        defaultBranch: main
-        
-    - action: debug:log
-      name: log
-      id: log
-      intput:
-        message: ${{ steps.publish-repository.output.repoContentsUrl }}
-
     - action: catalog:register
       id: register-with-catalog
       name: Manually register with the catalog
       input:
-        repoContentsUrl: ${{ steps.publish-repository.output.repoContentsUrl }}
+        catalogInfoUrl: https://github.com/iain-b/backstage-test-entities/blob/main/catalog-info.yaml
