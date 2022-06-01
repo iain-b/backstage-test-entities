@@ -24,6 +24,7 @@ spec:
               - github.com
             allowedOwners:
               - iain-b
+              - RoadieHQ
   steps:
     - id: publish-repository
       name: Publish
