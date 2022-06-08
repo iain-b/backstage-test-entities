@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: org-processor-test
+  description: Testing org
+spec:
+  type: github-org
+  target: https://github.com/RoadieHQ
