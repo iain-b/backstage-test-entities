@@ -5,4 +5,4 @@ metadata:
   description: Testing discovery
 spec:
   type: github-discovery
-  target: https://github.com/iain-b/*/blob/-/root-location.yaml
+  target: https://github.com/RoadieHQ
