@@ -1,0 +1,36 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: root
+  title: The Root
+spec:
+  type: config
+  lifecycle: production
+  owner: team-alpha
+  dependencyOf:
+    - resource:child-1
+    - resource:child-2
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: child-1
+  title: Child 1
+spec:
+  type: config
+  lifecycle: production
+  owner: team-alpha
+  dependsOn:
+    - resource:root
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: child-2
+  title: Child 2
+spec:
+  type: config
+  lifecycle: production
+  owner: team-alpha
+  dependsOn:
+    - resource:root
