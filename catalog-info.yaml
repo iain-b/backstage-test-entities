@@ -18,6 +18,7 @@ metadata:
     aws.com/lambda-region: eu-west-1
     jira/project-key: IB
     grafana/tag-selector: integrations-ceph
+    datadoghq.com/slo_tag: service:iblocal
 spec:
   type: service
   owner: user:iain-b
