@@ -19,6 +19,7 @@ metadata:
     jira/project-key: IB
     grafana/tag-selector: integrations-ceph
     datadoghq.com/slo_tag: service:iblocal
+    datadoghq.com/monitor_tags: service:iblocal
 spec:
   type: service
   owner: user:iain-b
