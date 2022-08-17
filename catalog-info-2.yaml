@@ -9,5 +9,5 @@ metadata:
     datadoghq.com/monitor_tags: iain-local
 spec:
   type: service
-  owner: user:iain-b
+  owner: engineering
   lifecycle: experimental
