@@ -1,0 +1,16 @@
+
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibtest-adr
+  description: |
+    A service for testing Backstage functionality. Configured for GitHub Actions and
+    Sentry.
+  annotations:
+    backstage.io/adr-location: https://github.com/backstage/backstage/tree/64f2e93089b61902a3302933dfec197deb10506c/docs/architecture-decisions
+spec:
+  type: service
+  lifecycle: experimental
+  implementsApis:
+    - sample-service
