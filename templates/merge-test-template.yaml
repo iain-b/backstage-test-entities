@@ -1,0 +1,57 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: merge-test-template
+  title: Merge test template
+  description: Merge test template
+
+spec:
+  owner: group:engineering
+  type: partial
+  parameters:
+    - title: Provide some simple information
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the section
+        title:
+          title: Title
+          type: string
+          description: Title to display in the settings page. If not supplied name will be used. (optional)
+        description:
+          title: Description
+          type: string
+          description: A description to display in the config section explaining the usage of the configuration.
+        pr_branch:
+          title: PR Branch name
+          type: string
+          description: The name of the branch to create. This should include your ticket number (e.g. sc-1234)
+  steps:
+    - id: fetch-index
+      name: Fetch schemas.ts
+      action: fetch:plain
+      input:
+        url: .
+        targetPath: allSchemas
+    - id: update-yaml
+      name: Update yaml with annotation
+      action: roadiehq:utils:merge
+      input:
+        path: ./components/subcomponent1
+        content:
+          metadata:
+            annotations:
+               test: 'a value'
+               
+    - id: publish-pr
+      name: Publish PR
+      action: publish:github:pull-request
+      input:
+        repoUrl: github.com?repo=roadie&owner=RoadieHQ
+        branchName:  ${{ parameters.pr_branch }}
+        title: Add section ${{ parameters.name }}
+        description: Add config section to roadie ${{ parameters.name }}
+        targetPath: plugins/app-config-backend/src/schema/schemas
