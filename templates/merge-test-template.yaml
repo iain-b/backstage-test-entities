@@ -10,8 +10,7 @@ spec:
   type: partial
   parameters:
     - title: Provide some simple information
-      required:
-        - name
+      required: []
       properties:
         pr_branch:
           title: PR Branch name
