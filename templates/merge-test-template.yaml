@@ -39,3 +39,4 @@ spec:
         repoUrl: github.com?repo=backstage-test-entities&owner=iain-b
         branchName:  ${{ parameters.pr_branch }}
         title: Add annotation
+        description: 'asdfasdf'
