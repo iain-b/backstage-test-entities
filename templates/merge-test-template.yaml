@@ -34,7 +34,7 @@ spec:
       name: Fetch schemas.ts
       action: fetch:plain
       input:
-        url: .
+        url: ../
         targetPath: allSchemas
     - id: update-yaml
       name: Update yaml with annotation
