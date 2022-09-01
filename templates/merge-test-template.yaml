@@ -26,7 +26,7 @@ spec:
       name: Update yaml with annotation
       action: roadiehq:utils:merge
       input:
-        path: ./components/subcomponent1
+        path: ./components/subcomponent1/catalog-info.yaml
         content:
           metadata:
             annotations:
