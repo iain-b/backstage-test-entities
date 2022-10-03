@@ -45,6 +45,6 @@ spec:
       name: Run workflow
       action: github:actions:dispatch
       input:
-        repoUrl: ${{ parameters.repoURL }}
+        repoUrl: ${{ parameters.repoUrl }}
         workflowId: test.yaml
         branchOrTagName: main
