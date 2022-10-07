@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: update-json-file
-  title: Update a json file
-  description: Opens a PR with updates to a json file.
+  name: ibtest-update-jsom
+  title: ibtest update json
+  description: asdfasdf
 
 spec:
   owner: engineering
