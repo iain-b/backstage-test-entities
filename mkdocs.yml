@@ -1,7 +1,8 @@
 site_name: My test docs
 
 nav:
-  - Home: test.md
+  - Home: index.md
+  - Test: pointer.md
 plugins:
   - techdocs-core
 
