@@ -27,12 +27,15 @@ spec:
 
     - id: update
       name: Update
-      action: roadiehq:utils:merge
+      action: json:merge
       input:
         # This file must exist at this path in the repo referenced above
         path: my-file.json
-        content:
-          other: ${{ parameters.myValue }}
+        content: |
+          { 
+            "${{parameters.myValue}}": "${{parameters.myValue}}" 
+          }
+          
 
     - id: publish
       name: Publish
