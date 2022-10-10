@@ -32,13 +32,6 @@ spec:
         # This file must exist at this path in the repo referenced above
         path: my-file.json
         content: '{ "${{parameters.myValue}}": "${{parameters.myValue}}" }'
-    - action: fs:read
-      id: read-file
-      input:
-        path: my-file.json
-    - action: debug:log
-      input:
-        message: ${{ steps.read-file.output.content }}
 
     - id: publish
       name: Publish
