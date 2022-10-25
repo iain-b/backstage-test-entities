@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: custom-api
+  title: Custom API
+  description: testing
+spec:
+  type: ibtest
+  lifecycle: dev
+  owner: guest
+  definition: |
+    The custom format!
