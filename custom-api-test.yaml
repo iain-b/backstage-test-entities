@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: custom-api
-  title: Custom API
+  title: Custom API Entity Title
   description: testing
 spec:
   type: ibtest
