@@ -9,4 +9,4 @@ spec:
   lifecycle: dev
   owner: guest
   definition: |
-    The custom format!
+    My definition!
