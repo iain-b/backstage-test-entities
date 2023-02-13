@@ -5,7 +5,7 @@ kind: Component
 metadata:
   name: ibtest-feature-branch-1
   description: |
-    feature branch test 2
+    feature branch test
   annotations:
     github.com/project-slug: roadiehq/sample-service
     datadoghq.com/monitor_tags: iain-local
