@@ -61,7 +61,7 @@ spec:
     email: team-alpha@example.com
     picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
   parent: level-2-c
-  children: []
+  children: ['level-4-a','level-4-b','level-4-c','level-4-d']
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -74,7 +74,7 @@ spec:
     email: team-alpha@example.com
     picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
   parent: level-2-c
-  children: ['level-4-a','level-4-b','level-4-c','level-4-d']
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
