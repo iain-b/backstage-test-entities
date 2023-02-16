@@ -1,0 +1,129 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-1
+  description: L1
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  children: ['level-2-a', 'level-2-b', 'level-2-c']
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-2-b
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-1
+  children: ['level-3-a', 'level-3-b', 'level-3-c', 'level-3-d']
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-2-a
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-1
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-2-c
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-1
+  children: ['level-3-e', 'level-3-f']
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-3-e
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-2-c
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-3-f
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-2-c
+  children: ['level-4-a','level-4-b','level-4-c','level-4-d']
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-4-a
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-3-f
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-4-b
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-3-f
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-4-c
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-3-f
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: level-4-d
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-alpha@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+  parent: level-3-f
+  children: []
