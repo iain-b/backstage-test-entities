@@ -1,8 +1,5 @@
-# This is test ADR 0000
+# 1. This is test ADR 0000
 
-* Status: accepted
-* Deciders: Iain
-* Date: 2023-03-27
 
 ## Context
 
