@@ -1,11 +1,8 @@
----
-id: adrs-adr000
-title: 'ADR000: [TITLE]'
-# prettier-ignore
-description: Architecture Decision Record (ADR) for [TITLE] [DESCRIPTION]
----
+# This is test ADR 0001
 
-<!-- These documents have names that are short noun phrases. For example, "ADR001: Deployment on Ruby on Rails 3.0.10" or "ADR009: LDAP for Multitenant Integration" -->
+* Status: accepted
+* Deciders: Iain
+* Date: 2023-03-27
 
 ## Context
 
