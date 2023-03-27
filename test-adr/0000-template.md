@@ -1,4 +1,4 @@
-# This is test ADR 0001
+# This is test ADR 0000
 
 * Status: accepted
 * Deciders: Iain
