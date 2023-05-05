@@ -20,6 +20,7 @@ metadata:
     grafana/tag-selector: integrations-ceph
     datadoghq.com/slo_tag: service:iblocal
     datadoghq.com/monitor_tags: service:iblocal
+    sonarqube.org/project-key: AcmeInc_blah-template
 spec:
   type: service
   owner: user:iain-b
