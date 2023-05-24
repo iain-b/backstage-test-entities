@@ -23,7 +23,7 @@ metadata:
     sonarqube.org/project-key: AcmeInc_blah-template
 spec:
   type: service
-  owner: user:iain-b
+  owner: roadie-backstage-admin
   lifecycle: experimental
   implementsApis:
     - sample-service
