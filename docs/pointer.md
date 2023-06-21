@@ -1,1 +1,3 @@
---8<-- "templates/README.md"
+```yaml
+--8<-- "templates/merge-test-template.yaml"
+```
