@@ -5,7 +5,7 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry.
-  tags: ['test', 'test2.0']
+  tags: ['test']
   labels:
     test: 'true'
     can.I.have: 'dots'
