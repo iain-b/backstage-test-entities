@@ -5,7 +5,7 @@ metadata:
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
     Sentry. Ping 56.
-  tags: ['test', 'test.me']
+  tags: ['test', 'test2']
   labels:
     test: 'true'
     can.I.have: 'dots'
