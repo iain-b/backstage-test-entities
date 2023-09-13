@@ -26,7 +26,7 @@ spec:
       id: 'publish'
       name: Publish Azure
       input:
-        repoUrl: "dev.azure.com?organization=${{ parameters.org }}&project=${{ parameters.project }}&repo=${{ parameters.repo }}"
+        repoUrl: "dev.azure.com?organization=${{ parameters.org }}&owner=${{ parameters.org }}&project=${{ parameters.project }}&repo=${{ parameters.repo }}"
   #   - id: cloneAzureRepo
   #     name: Clone Azure Repo
   #     action: azure:repo:clone
