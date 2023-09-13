@@ -15,11 +15,11 @@ spec:
         - owner
       properties:
         org:
-          title: Project name
+          title: Org name
           type: string
           description: 
         repo:
-          title: Project name
+          title: Repo name
           type: string
           description: 
         project:
