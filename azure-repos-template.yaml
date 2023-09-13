@@ -22,13 +22,18 @@ spec:
           type: string  
 
   steps:
-    - id: cloneAzureRepo
-      name: Clone Azure Repo
-      action: azure:repo:clone
+    - action: 'publish:azure'
+      id: 'publish'
+      name: Publish Azure
       input:
-        remoteUrl: "https://${{ parameters.org }}@dev.azure.com/${{ parameters.org }}/${{ parameters.project }}/_git/${{ parameters.repo }}"
-        branch: "main"
-        targetPath: ./sub-directory
+        repoUrl: "https://${{ parameters.org }}@dev.azure.com/${{ parameters.org }}/${{ parameters.project }}/_git/${{ parameters.repo }}"
+  #   - id: cloneAzureRepo
+  #     name: Clone Azure Repo
+  #     action: azure:repo:clone
+  #     input:
+  #       remoteUrl: "https://${{ parameters.org }}@dev.azure.com/${{ parameters.org }}/${{ parameters.project }}/_git/${{ parameters.repo }}"
+  #       branch: "main"
+  #       targetPath: ./sub-directory
 
     # - id: pushAzureRepo
     #   name: Push to Remote Azure Repo
