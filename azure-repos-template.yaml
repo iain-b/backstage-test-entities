@@ -17,15 +17,12 @@ spec:
         org:
           title: Org name
           type: string
-          description: 
         repo:
           title: Repo name
-          type: string
-          description: 
+          type: string 
         project:
           title: Project name
-          type: string
-          description:  
+          type: string  
 
   steps:
     - id: cloneAzureRepo
