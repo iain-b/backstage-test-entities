@@ -14,17 +14,25 @@ spec:
         - name
         - owner
       properties:
-        name:
+        org:
           title: Project name
           type: string
           description: 
+        repo:
+          title: Project name
+          type: string
+          description: 
+        project:
+          title: Project name
+          type: string
+          description:  
 
   steps:
     - id: cloneAzureRepo
       name: Clone Azure Repo
       action: azure:repo:clone
       input:
-        remoteUrl: "https://${{ parameters.name }}@dev.azure.com/${{ parameters.name }}/${{ parameters.name }}/_git/${{ parameters.name }}"
+        remoteUrl: "https://${{ parameters.org }}@dev.azure.com/${{ parameters.org }}/${{ parameters.project }}/_git/${{ parameters.repo }}"
         branch: "main"
         targetPath: ./sub-directory
 
