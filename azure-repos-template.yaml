@@ -10,9 +10,6 @@ spec:
 
   parameters:
     - title: Fill in some steps
-      required:
-        - name
-        - owner
       properties:
         org:
           title: Org name
