@@ -5,6 +5,7 @@ metadata:
   description: Engineering Department
 spec:
   type: team
+  parent: roadie
   profile:
     # Intentional no displayName for testing
     email: team-alpha@example.com
