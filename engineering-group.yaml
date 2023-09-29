@@ -5,7 +5,7 @@ metadata:
   description: Engineering Department
 spec:
   type: team
-  parent: roadie
+  parent: 'roadie'
   children: []
   profile:
     # Intentional no displayName for testing
