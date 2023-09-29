@@ -6,6 +6,7 @@ metadata:
 spec:
   type: team
   parent: roadie
+  children: []
   profile:
     # Intentional no displayName for testing
     email: team-alpha@example.com
