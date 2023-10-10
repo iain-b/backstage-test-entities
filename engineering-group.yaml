@@ -7,7 +7,7 @@ spec:
   type: team
   parent: 'roadie'
   children: []
-  profile:
+  # profile:
     # Intentional no displayName for testing
     #email: team-alpha@example.com
     #picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
