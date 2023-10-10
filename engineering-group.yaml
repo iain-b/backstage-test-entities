@@ -9,5 +9,5 @@ spec:
   children: []
   profile:
     # Intentional no displayName for testing
-    email: team-alpha@example.com
-    picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
+    #email: team-alpha@example.com
+    #picture: https://avatars.dicebear.com/api/identicon/team-alpha@example.com.svg?background=%23fff&margin=25
