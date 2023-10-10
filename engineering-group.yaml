@@ -3,7 +3,7 @@ kind: Group
 metadata:
   name: engineering
   description: Engineering Department
-spec: {}
+# spec:
   # type: team
   # parent: 'roadie'
   # children: []
