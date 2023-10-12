@@ -9,7 +9,7 @@ metadata:
     test: 'true'
     can.I.have: 'dots'
   annotations:
-    roadie.io/tech-insights-repository-location: asdfasdf.yaml
+    roadie.io/tech-insights-repository-location: https://github.com/iain-b/backstage-test-entities/tree/main/
     github.com/project-slug: roadiehq/sample-service
     sentry.io/project-slug: sample-service
     backstage.io/techdocs-ref: dir:./
