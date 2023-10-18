@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ibtest-3
+  description: |
+    An entity owned directly by infrastructure in the test data
+  annotations:
+    github.com/project-slug: roadiehq/sample-service
+spec:
+  type: service
+  owner: infrastructure
+  lifecycle: experimental
