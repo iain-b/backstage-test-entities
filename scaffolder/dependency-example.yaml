@@ -1,22 +1,38 @@
-parameters:
-  - title: Section 1
-    type: object
-    properties:
-      yesOrNo:
-        type: boolean
-        title: Yes or no?
-    dependencies:
-      yesOrNo:
-        oneOf:
-          - required:
-              - userInput
-            properties:
-              yesOrNo:
-                const: true
-              userInput:
-                type: string
-                title: User input
-                ui:emptyValue: ''
-          - properties:
-              yesOrNo:
-                const: false
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: workflow-dispatch-example
+  title: Workflow example
+  description: Tes
+
+spec:
+  owner: group:engineering
+  type: service
+  parameters:
+    - title: Section 1
+      type: object
+      properties:
+        yesOrNo:
+          type: boolean
+          title: Yes or no?
+      dependencies:
+        yesOrNo:
+          oneOf:
+            - required:
+                - userInput
+              properties:
+                yesOrNo:
+                  const: true
+                userInput:
+                  type: string
+                  title: User input
+                  ui:emptyValue: ''
+            - properties:
+                yesOrNo:
+                  const: false
+  steps:
+    - action: debug:log
+      id: write-debug-line
+      name: Write log line
+      input:
+        message: "${{ parameters.yesOrNo }} ${{ parameters.userInput }}"
