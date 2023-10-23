@@ -1,10 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: workflow-dispatch-example
-  title: Workflow example
-  description: Tes
-
+  name: workflow-dependency-example
+  title: Dependency example
 spec:
   owner: group:engineering
   type: service
