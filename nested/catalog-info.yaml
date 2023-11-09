@@ -12,7 +12,6 @@ metadata:
     roadie.io/tech-insights-repository-location: https://github.com/iain-b/backstage-test-entities/tree/main/
     github.com/project-slug: roadiehq/sample-service
     sentry.io/project-slug: sample-service
-    backstage.io/techdocs-ref: dir:./
     snyk.io/org-name: dtuite
     snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
     sonarqube.org/project-key: AcmeInc_blah-template
