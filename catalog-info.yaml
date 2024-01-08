@@ -15,7 +15,7 @@ metadata:
     sentry.io/project-slug: sample-service
     backstage.io/techdocs-ref: dir:./
     pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
-    snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0
+    # snyk.io/org-id: a0e0775e-2b17-4e57-8d85-6c8fbe5bc9a0
     argocd/app-name: ibtest
     aws.com/lambda-function-name: roadie-test-load-to-elastic
     aws.com/lambda-region: eu-west-1
