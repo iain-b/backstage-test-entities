@@ -4,6 +4,8 @@ metadata:
   name: merge-test-template
   title: Merge test template
   description: Merge test template
+  tags:
+    - group1
 
 spec:
   owner: group:engineering
