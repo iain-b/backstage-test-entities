@@ -6,6 +6,8 @@ metadata:
   description: Merge test template
   tags:
     - group1
+  annotations:
+    roadie.io/certified: "true"
 
 spec:
   owner: group:engineering
