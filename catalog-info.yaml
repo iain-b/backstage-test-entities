@@ -24,7 +24,8 @@ metadata:
     datadoghq.com/slo_tag: service:iblocal
     datadoghq.com/monitor_tags: service:iblocal
     sonarqube.org/project-key: AcmeInc_blah-template
-    endoflife.date/products: angular,nginx
+    # endoflife.date/products: angular,nginx
+    endoflife.date/source-location: ./missing.json
 spec:
   type: service
   owner: roadie-backstage-admin
