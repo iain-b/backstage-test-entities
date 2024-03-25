@@ -19,7 +19,7 @@ metadata:
     argocd/app-name: ibtest
     aws.com/lambda-function-name: roadie-test-load-to-elastic
     aws.com/lambda-region: eu-west-1
-    jira/project-key: IB
+    jira/project-key: WD
     grafana/tag-selector: integrations-ceph
     datadoghq.com/slo_tag: service:iblocal
     datadoghq.com/monitor_tags: service:iblocal
