@@ -22,14 +22,6 @@ spec:
           description: Choose a unique project name.
           ui:field: EntityNamePicker
           ui:autofocus: true
-        owner:
-          title: Owner
-          type: string
-          description: Select an owner for the Backstage component.
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds:
-              - Group
 
   steps:
     - id: cloneAzureRepo
@@ -37,7 +29,7 @@ spec:
       action: azure:repo:clone
       input:
         remoteUrl: "https://roadie-demo@dev.azure.com/roadie-demo/Sample-Services/_git/sample-service"
-        branch: "master"
+        branch: "scaffolder"
         targetPath: ./sub-directory
 
     - id: fetch
@@ -54,7 +46,7 @@ spec:
       name: Push to Remote Azure Repo
       action: azure:repo:push
       input:
-        branch: "sc-20065-test1"
+        branch: "scaffolder"
         sourcePath: ./sub-directory
         gitCommitMessage: Add ${{ parameters.name }} project files
 
@@ -62,7 +54,7 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        sourceBranch: "sc-20065-test1"
+        sourceBranch: "scaffolder"
         targetBranch: "master"
         repoId: sample-service
         title: ${{ parameters.name }}
@@ -70,17 +62,7 @@ spec:
         organization: roadie-demo
         supportsIterations: false
 
-    - id: register
-      name: Register
-      action: catalog:register
-      input:
-        repoContentsUrl: "dev.azure.com?owner=Sample-Services&repo=sample-service&organization=roadie-demo&version=sc-20065"
-        catalogInfoPath: "/catalog-info.yaml"
-
   output:
     links:
       - title: Repository
         url: "dev.azure.com?owner=Sample-Services&repo=sample-service&organization=roadie-demo"
-      - title: Open in catalog
-        icon: catalog
-        entityRef: ${{ steps.register.output.entityRef }}
