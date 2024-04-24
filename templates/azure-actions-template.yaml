@@ -54,7 +54,7 @@ spec:
       name: Push to Remote Azure Repo
       action: azure:repo:push
       input:
-        branch: "test"
+        branch: "sc-20065"
         sourcePath: ./sub-directory
         gitCommitMessage: Add ${{ parameters.name }} project files
 
@@ -62,7 +62,7 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        sourceBranch: "test"
+        sourceBranch: "sc-20065"
         targetBranch: "master"
         repoId: sample-service
         title: ${{ parameters.name }}
@@ -73,7 +73,7 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: "dev.azure.com?owner=Sample-Services&repo=sample-service&organization=roadie-demo&version=test"
+        repoContentsUrl: "dev.azure.com?owner=Sample-Services&repo=sample-service&organization=roadie-demo&version=sc-20065"
         catalogInfoPath: "/catalog-info.yaml"
 
   output:
