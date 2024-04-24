@@ -67,6 +67,7 @@ spec:
         repoId: sample-service
         title: ${{ parameters.name }}
         project: Sample-Services
+        organization: roadie-demo
         supportsIterations: false
 
     - id: register
