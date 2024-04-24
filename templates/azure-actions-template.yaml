@@ -37,7 +37,7 @@ spec:
       action: azure:repo:clone
       input:
         remoteUrl: "https://roadie-demo@dev.azure.com/roadie-demo/Sample-Services/_git/sample-service"
-        branch: "main"
+        branch: "master"
         targetPath: ./sub-directory
 
     - id: fetch
@@ -63,7 +63,7 @@ spec:
       action: azure:repo:pr
       input:
         sourceBranch: "test"
-        targetBranch: "main"
+        targetBranch: "master"
         repoId: sample-service
         title: ${{ parameters.name }}
         project: Sample-Services
