@@ -54,7 +54,7 @@ spec:
       name: Push to Remote Azure Repo
       action: azure:repo:push
       input:
-        branch: "sc-20065"
+        branch: "sc-20065-${{ parameters.name }}"
         sourcePath: ./sub-directory
         gitCommitMessage: Add ${{ parameters.name }} project files
 
@@ -62,7 +62,7 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        sourceBranch: "sc-20065"
+        sourceBranch: "sc-20065-${{ parameters.name }}"
         targetBranch: "master"
         repoId: sample-service
         title: ${{ parameters.name }}
