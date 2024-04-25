@@ -26,7 +26,7 @@ spec:
           type: string
           default: master
         remoteBranch:
-          title: Source Branch
+          title: Remote Branch
           type: string
           default: scaffolder
   steps:
