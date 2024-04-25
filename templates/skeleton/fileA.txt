@@ -1,1 +1,1 @@
-${{ values.name }}
+name: ${{ values.name }}
