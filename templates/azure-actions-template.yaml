@@ -70,4 +70,4 @@ spec:
   output:
     links:
       - title: Repository
-        url: "dev.azure.com?owner=Sample-Services&repo=sample-service&organization=roadie-demo"
+        url: "https://dev.azure.com/roadie-demo/Sample-Services/_git/sample-service/pullrequest/${{ outputs.pullRequestAzureRepo.pullRequestId}}"
