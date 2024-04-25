@@ -60,7 +60,7 @@ spec:
       action: azure:repo:pr
       input:
         sourceBranch: ${{ parameters.remoteBranch }}
-        targetBranch: ${{ parameters.sourceBranch }}
+        targetBranch: "master"
         repoId: sample-service
         title: ${{ parameters.name }}
         project: Sample-Services
