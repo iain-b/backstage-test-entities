@@ -4,10 +4,6 @@ metadata:
   name: merge-test-template
   title: Merge test template
   description: Merge test template
-  tags:
-    - group1
-  annotations:
-    roadie.io/certified: "true"
 
 spec:
   owner: group:engineering
