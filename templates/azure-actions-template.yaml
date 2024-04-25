@@ -21,17 +21,21 @@ spec:
           description: Choose a unique project name.
           ui:field: EntityNamePicker
           ui:autofocus: true
-        branch:
-          title: Branch
+        sourceBranch:
+          title: Source Branch
           type: string
           default: master
+        remoteBranch:
+          title: Source Branch
+          type: string
+          default: scaffolder
   steps:
     - id: cloneAzureRepo
       name: Clone Azure Repo
       action: azure:repo:clone
       input:
         remoteUrl: "https://roadie-demo@dev.azure.com/roadie-demo/Sample-Services/_git/sample-service"
-        branch: "master"
+        branch: ${{ parameters.sourceBranch }}
         targetPath: ./sub-directory
 
     - id: fetch
@@ -42,13 +46,12 @@ spec:
         targetPath: ./sub-directory
         values:
           name: ${{ parameters.name }}
-          owner: ${{ parameters.owner }}
 
     - id: pushAzureRepo
       name: Push to Remote Azure Repo
       action: azure:repo:push
       input:
-        branch: ${{ parameters.branch }}
+        branch: ${{ parameters.remoteBranch }}
         sourcePath: ./sub-directory
         gitCommitMessage: Add ${{ parameters.name }} project files
 
@@ -56,8 +59,8 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        sourceBranch: ${{ parameters.branch }}
-        targetBranch: "master"
+        sourceBranch: ${{ parameters.remoteBranch }}
+        targetBranch: ${{ parameters.sourceBranch }}
         repoId: sample-service
         title: ${{ parameters.name }}
         project: Sample-Services
