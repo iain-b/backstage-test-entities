@@ -29,6 +29,8 @@ metadata:
 spec:
   type: service
   owner: roadie-backstage-admin
+  productOwner: 'user:colette.brock'
+  engineeringManager: 'user:calum.leavy'
   lifecycle: experimental
   implementsApis:
     - sample-service
