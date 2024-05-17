@@ -46,6 +46,20 @@ spec:
         targetPath: ./sub-directory
         values:
           name: ${{ parameters.name }}
+    
+    - id: update-yaml
+      name: Update yaml file
+      action: roadiehq:utils:merge
+      input:
+        path: ./sub-directory/updateable.yaml
+        content:
+          keyB: B
+
+    - id: debug
+      name: Print directory info
+      action: debug:log
+      input:
+        listWorkspace: true
 
     - id: pushAzureRepo
       name: Push to Remote Azure Repo
