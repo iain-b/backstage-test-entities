@@ -51,9 +51,10 @@ spec:
       name: Update yaml file
       action: roadiehq:utils:merge
       input:
-        path: ./sub-directory/updateable.yaml
+        path: ./sub-directory/catalog-info-1.yaml
         content:
-          keyB: B
+          metadata:
+            description: 'Update existing file in repo and push'
 
     - id: debug
       name: Print directory info
