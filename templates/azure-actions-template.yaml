@@ -47,14 +47,14 @@ spec:
         values:
           name: ${{ parameters.name }}
     
-    - id: update-yaml
-      name: Update yaml file
-      action: roadiehq:utils:merge
-      input:
-        path: ./sub-directory/catalog-info-1.yaml
-        content:
-          metadata:
-            description: 'Update existing file in repo and push'
+    # - id: update-yaml
+    #   name: Update yaml file
+    #   action: roadiehq:utils:merge
+    #   input:
+    #     path: ./sub-directory/catalog-info-1.yaml
+    #     content:
+    #       metadata:
+    #         description: 'Update existing file in repo and push'
 
     - id: debug
       name: Print directory info
