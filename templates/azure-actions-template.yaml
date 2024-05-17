@@ -44,6 +44,7 @@ spec:
       input:
         url: ./skeleton
         targetPath: ./sub-directory
+        replace: true
         values:
           name: ${{ parameters.name }}
     
