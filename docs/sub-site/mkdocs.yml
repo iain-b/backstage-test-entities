@@ -1,5 +1,6 @@
 site_name: mycomponent
 site_description: 'My Component'
+edit_uri: edit/main/docs/sub-site/docs
 
 plugins:
   - monorepo
