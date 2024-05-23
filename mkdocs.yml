@@ -3,7 +3,7 @@ site_name: My test docs
 nav:
   - Home: index.md
   - Test: pointer.md
-  - Sub Site: "!include ./sub-site/mkdocs.yml"
+  - Sub Site: "!include ./docs/sub-site/mkdocs.yml"
 plugins:
   - techdocs-core
 
