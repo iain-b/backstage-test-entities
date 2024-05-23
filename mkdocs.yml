@@ -1,5 +1,5 @@
 site_name: My test docs
-repor_url: https://github.com/iain-b/backstage-test-entities/
+repo_url: https://github.com/iain-b/backstage-test-entities/
 edit_uri: edit/main/docs
 
 nav:
