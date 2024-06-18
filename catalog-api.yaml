@@ -5,7 +5,7 @@ metadata:
   description: View catalog API docs locally
   title: Catalog Api
 spec:
-  type: api-docs
+  type: openapi
   lifecycle: production
   owner: group:engineering
   definition:
