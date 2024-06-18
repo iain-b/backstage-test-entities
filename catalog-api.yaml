@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: catalog-api
+  description: View catalog API docs locally
+  title: Catalog Api
+spec:
+  type: api-docs
+  lifecycle: production
+  owner: group:engineering
+  definition:
+    $openapi: http://localhost:7007/api/catalog/api-doc
