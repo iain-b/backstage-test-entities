@@ -9,4 +9,4 @@ spec:
   lifecycle: production
   owner: group:engineering
   definition:
-    $openapi: /api/catalog/api-doc
+    $openapi: http://localhost:7007/api/catalog/api-docs
