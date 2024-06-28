@@ -1,13 +1,14 @@
 site_name: My test docs
 repo_url: https://github.com/iain-b/backstage-test-entities/
-edit_uri: edit/main/docs
+# edit_uri: edit/main/docs
 
-nav:
-  - Home: index.md
-  - Test: pointer.md
-  - Sub Site: "!include ./sub-site/mkdocs.yml"
+# nav:
+#   - Home: index.md
+#   - Test: pointer.md
+#   - Sub Site: "!include ./sub-site/mkdocs.yml"
 plugins:
   - techdocs-core
+  - same-dir
 
 markdown_extensions:
 #  - markdown_inline_mermaid
