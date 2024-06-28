@@ -1,6 +1,7 @@
 site_name: My test docs
 repo_url: https://github.com/iain-b/backstage-test-entities/
 # edit_uri: edit/main/docs
+docs_dir: '.'
 
 # nav:
 #   - Home: index.md
