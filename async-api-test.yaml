@@ -1,0 +1,50 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-events-api
+  description: API for publishing user-related events.
+  tags:
+    - user
+    - events
+spec:
+  type: asyncapi
+  lifecycle: experimental
+  owner: team-user-platform
+  definition: |
+    asyncapi: '2.1.0'
+    info:
+      title: User Events API
+      version: '1.0.0'
+      description: API for handling user events such as user creation.
+    servers:
+      production:
+        url: production.example.com:443
+        protocol: amqp
+    channels:
+      user.created:
+        description: Channel for user creation events.
+        subscribe:
+          summary: Receive an event when a user is created.
+          operationId: onUserCreated
+          message:
+            contentType: application/json
+            payload:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Unique identifier of the user.
+                  example: "12345"
+                name:
+                  type: string
+                  description: Name of the user.
+                  example: "John Doe"
+                email:
+                  type: string
+                  description: Email address of the user.
+                  example: "john.doe@example.com"
+                created_at:
+                  type: string
+                  format: date-time
+                  description: The timestamp when the user was created.
+                  example: "2023-08-30T12:00:00Z"
