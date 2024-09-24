@@ -1,0 +1,319 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: catalog-test
+  description: Catalog Test
+  annotations:
+    backstage.io/techdocs-ref: url:s3
+  tags:
+    - java
+    - data
+    - test-component
+  links:
+    - url: https://example.com/apm/catalog-test
+      title: APM
+      icon: dashboard
+    - url: https://example.com/logs/catalog-test
+      title: Logs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: artist-lookup
+  description: Artist Lookup
+  annotations:
+    backstage.io/techdocs-ref: url:s3
+  tags:
+    - java
+    - data
+    - test-component
+  links:
+    - url: https://example.com/apm/artists-lookup
+      title: APM
+      icon: dashboard
+    - url: https://example.com/logs/artists-lookup
+      title: Logs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: artist-engagement-portal
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dynamic-ui-test-componenet
+  description: Dynamic UI test comp
+  annotations:
+    backstage.io/techdocs-ref: url:s3
+  tags:
+    - java
+    - data
+    - test-component
+  links:
+    - url: https://example.com/apm/dnyamic-ui
+      title: APM
+      icon: dashboard
+    - url: https://example.com/logs/dynamic-ui
+      title: Logs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: artist-engagement-portal
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-a
+  description: Team A
+  namespace: 'default'
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-a@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
+  parent: backstage
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: breanna.davison
+  namespace: 'default'
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: breanna-davison@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: joe.bloggs
+  namespace: 'default'
+spec:
+  profile:
+    email: joe.bloggs@example.com
+    displayName: 'Joe Bloggs'
+    picture: https://avatars.dicebear.com/api/avataaars/joe.bloggs@example.com.svg?background=%23fff
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: janelle.dawe
+  namespace: 'default'
+spec:
+  profile:
+    displayName: Janelle Dawe
+    email: janelle-dawe@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/janelle-dawe@example.com.svg?background=%23fff
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: nigel.manning
+  namespace: 'default'
+spec:
+  profile:
+    displayName: Nigel Manning
+    email: nigel-manning@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/nigel-manning@example.com.svg?background=%23fff
+  memberOf: [team-a]
+---
+# This user is added as an example, to make it more easy for the "Guest"
+# sign-in option to demonstrate some entities being owned. In a regular org,
+# a guest user would probably not be registered like this.
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+  namespace: 'default'
+spec:
+  profile:
+    displayName: Guest User
+    email: guest@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: artists
+  description: Everything related to artists
+  links:
+    - url: http://example.com/domain/artists/
+      title: Domain Readme
+    - url: http://example.com/domains/artists/dashboard
+      title: Domain Metrics Dashboard
+      icon: dashboard
+spec:
+  owner: team-a
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: artists-db
+  description: Stores artist details
+spec:
+  type: database
+  owner: team-a
+  system: artist-engagement-portal
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: artist-engagement-portal
+  description: Everything related to artists
+  tags:
+    - portal
+spec:
+  owner: team-a
+  domain: artists
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: passenger-backend
+  description: |
+    Lookup information on active passengers. Name, location etc.
+  links:
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: What is the Passenger Backend?
+      icon: help
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Grafana
+    - url: https://www.notion.so/roadie/Sample-Service-e067465e56a14ae9b0507f8559f6aa26
+      title: Datadog
+      icon: dashboard
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+    # The Sentry organization is stored in the app-config.yaml of the Backstage instance.
+    sentry.io/project-slug: sample-service
+    cloud.google.com/function-ids: projects/roadie-dev-283705/locations/europe-west1/functions/test-fn-1
+    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
+    pagerduty.com/integration-key: 1cf15c07f6f440e0a8d65b7ce80be834
+    snyk.io/org-name: roadie
+    snyk.io/project-ids: 63ac09c4-fd65-4f53-b9b2-c31d2dee3291
+    backstage.io/kubernetes-id: sample-service
+  tags:
+    - test-component
+spec:
+  type: service
+  owner: team-a
+  lifecycle: production
+  system: passengers
+  providesApis:
+    - passengers-api
+  dependsOn:
+    - Component:core-auth-module
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-queueing-library
+  description: Push jobs onto a globally available shared queue.
+  tags:
+    - test-component
+spec:
+  type: library
+  lifecycle: production
+  owner: team-a
+  dependencyOf:
+    - Component:passenger-backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-auth-module
+  description: Authenticate incoming requests.
+  tags:
+    - test-component
+spec:
+  type: library
+  lifecycle: production
+  owner: team-a
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: passengers-api
+  description: Lookup information on active passengers. Name, location etc.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  system: passengers
+  definition:
+    $text: https://github.com/RoadieHQ/sample-service/blob/main/api-spec.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: passengers
+  description: Passenger management and tracking.
+spec:
+  owner: team-a
+  domain: ride-sharing
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: ride-sharing
+  description: Moving people easier and faster.
+spec:
+  owner: team-a
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: trips
+  description: Trip management and reporting.
+spec:
+  owner: team-a
+  domain: ride-sharing
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: trips-counter
+  description: Count the number of trips by geographic region, passenger etc.
+  annotations:
+    github.com/project-slug: RoadieHQ/sample-service
+  tags:
+    - test-component
+spec:
+  type: service
+  owner: team-a
+  lifecycle: production
+  system: trips
+  consumesApis:
+    - passengers-api
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: print-user-1
+  description: test the now filter
+spec:
+  type: service
+  owner: user:guest
+  steps:
+    - id: debug-filter
+      name: debug-filter
+      action: debug:log
+      input:
+        message: ${{ user | dump }}
+    - id: debug-user-ref
+      name: debug-user-ref
+      action: debug:log
+      input:
+        message: 'Hello, ${{ user.ref }} ${{ user.entity.metadata.name }} !'
