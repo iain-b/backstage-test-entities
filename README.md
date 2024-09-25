@@ -1,2 +1,2 @@
 Adding a readme to test a mkdocs extension.
-Ping 3.
+Ping 5.
