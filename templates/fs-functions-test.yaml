@@ -1,1 +1,29 @@
-
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: fs-test-fn
+  title: fs actions test template
+spec:
+  owner: group:engineering
+  type: partial
+  parameters: []
+  steps:
+    - id: fetch-index
+      name: Fetch schemas.ts
+      action: fetch:plain
+      input:
+        url: ../
+    - id: fs-append
+      name: test append
+      action: roadiehq:utils:fs:append
+      input:
+        path: ./catalog-info-1.yaml
+        content: 'append: true'
+    - id: fs-replace
+      name: test replace
+      action: roadiehq:utils:fs:replace
+      input:
+        files:
+          - file: ./catalog-info-1.yaml
+            find: 'true'
+            replaceWith: 'false'
