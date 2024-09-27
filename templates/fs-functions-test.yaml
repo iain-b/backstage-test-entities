@@ -26,4 +26,10 @@ spec:
         files:
           - file: ./catalog-info-1.yaml
             find: 'true'
+    - id: debug
+      name: debug
+      action: debug:log
+      input:
+        message: hello world
+        listWorkspace: true
             replaceWith: 'false'
