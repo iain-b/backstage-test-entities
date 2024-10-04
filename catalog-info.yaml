@@ -4,7 +4,7 @@ metadata:
   name: ibtest-1
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
-    Sentry. 1004
+    Sentry. 10042
   tags: ['test', 'test1', 'test2']
   labels:
     test: 'true'
