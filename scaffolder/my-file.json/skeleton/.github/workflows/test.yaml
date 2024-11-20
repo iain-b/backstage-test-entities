@@ -1,0 +1,13 @@
+---
+name: CI
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Deploy to prod
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "running"
