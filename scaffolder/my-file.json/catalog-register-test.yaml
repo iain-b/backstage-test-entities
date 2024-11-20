@@ -1,0 +1,17 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: test-catalog-register
+  title: testing
+  description: tesitng catalog:register
+
+spec:
+  owner: iain@roadie.io
+  type: service
+  parameters: {}
+  steps:
+    - action: catalog:register
+      id: register-with-catalog
+      name: Manually register with the catalog
+      input:
+        catalogInfoUrl: https://github.com/iain-b/backstage-test-entities/blob/main/catalog-info.yaml
