@@ -21,7 +21,7 @@ spec:
 
         gitHubOrg:
           type: string
-          default: iain-b
+          default: RoadieHQ
           ui:widget: hidden
 
         repoName:
