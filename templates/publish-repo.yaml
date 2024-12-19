@@ -21,7 +21,7 @@ spec:
 
         gitHubOrg:
           type: string
-          default: sblausten
+          default: iain-b
           ui:widget: hidden
 
         repoName:
