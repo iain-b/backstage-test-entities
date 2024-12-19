@@ -21,7 +21,7 @@ spec:
 
         gitHubOrg:
           type: string
-          default: roadie-demo # TODO: Set your GitHub Org value here.
+          default: iain-b
           ui:widget: hidden
 
         repoName:
