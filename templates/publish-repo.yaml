@@ -14,19 +14,13 @@ spec:
       required:
         - repoName
       properties:
-        repoHost:
+        repoUrl:
+          title: Repository Location
           type: string
-          default: github.com
-          # ui:widget: hidden
-
-        gitHubOrg:
-          type: string
-          default: RoadieHQ
-          # ui:widget: hidden
-
-        repoName:
-          title: Repository Name
-          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
 
         defaultBranch:
           title: Repository Branch
