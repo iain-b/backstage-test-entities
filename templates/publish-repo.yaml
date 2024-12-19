@@ -158,7 +158,7 @@ spec:
       name: Publish New Repository.
       action: publish:github
       input:
-        repoUrl: ${{ parameters.repoHost }}?owner=${{ parameters.gitHubOrg }}&repo=${{ parameters.repoName }}
+        repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: ${{ parameters.repoVisibility }}
         defaultBranch: ${{ parameters.defaultBranch }}
         title: Publish new Repository
