@@ -17,12 +17,12 @@ spec:
         repoHost:
           type: string
           default: github.com
-          ui:widget: hidden
+          # ui:widget: hidden
 
         gitHubOrg:
           type: string
           default: RoadieHQ
-          ui:widget: hidden
+          # ui:widget: hidden
 
         repoName:
           title: Repository Name
