@@ -12,15 +12,21 @@ spec:
   parameters:
     - title: Repository Details # Title of the first step.
       required:
-        - repoUrl
+        - repoName
       properties:
-        repoUrl:
-          title: Repository Location
+        repoHost:
           type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - github.com
+          default: github.com
+          ui:widget: hidden
+
+        gitHubOrg:
+          type: string
+          default: iain-b
+          ui:widget: hidden
+
+        repoName:
+          title: Repository Name
+          type: string
 
         defaultBranch:
           title: Repository Branch
@@ -31,7 +37,7 @@ spec:
         repoVisibility:
           title: Repository Visibility
           type: string
-          default: private
+          default: public
           enum: ['private', 'public']
 
     - title: Component Details # Title of the second step.
