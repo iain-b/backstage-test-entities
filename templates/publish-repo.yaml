@@ -21,7 +21,7 @@ spec:
 
         gitHubOrg:
           type: string
-          default: iain-b
+          default: AcmeInc
           ui:widget: hidden
 
         repoName:
