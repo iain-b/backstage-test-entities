@@ -12,7 +12,7 @@ spec:
   parameters:
     - title: Repository Details # Title of the first step.
       required:
-        - repoName
+        - repoUrl
       properties:
         repoUrl:
           title: Repository Location
