@@ -20,10 +20,9 @@ spec:
             allowedHosts:
               - ghes.enginehouse.io
             allowedOwners:
-              - Roadie-Demo
+              - ian-link
             allowedRepos:
-              - access-test
-              - sample-repo
+              - template-test
   steps:
     - id: modify
       name: modify
@@ -35,7 +34,7 @@ spec:
       id: create-pull-request
       name: Create a pull request
       input:
-        repoUrl: 'ghes.enginehouse.io?repo=access-test&owner=Roadie-Demo'
+        repoUrl: 'ghes.enginehouse.io?repo=access-test&owner=ian-link'
         branchName: ticketNumber-123
         title: 'Make some changes to the files'
         description: 'testing user oauth'
