@@ -23,19 +23,19 @@ spec:
               - Roadie-Demo
             allowedRepos:
               - sample-repo
-steps:
-  - id: modify
-    name: modify
-    action: roadiehq:utils:fs:write
-    input:
-      path: ./test
-      content: testing
-  - action: publish:github:pull-request
-    id: create-pull-request
-    name: Create a pull request
-    input:
-      repoUrl: 'ghes.enginehouse.io?repo=access-test&owner=Roadie-Demo'
-      branchName: ticketNumber-123
-      title: 'Make some changes to the files'
-      description: 'testing user oauth'
-      token: ${{ secrets.USER_OAUTH_TOKEN }}
+  steps:
+    - id: modify
+      name: modify
+      action: roadiehq:utils:fs:write
+      input:
+        path: ./test
+        content: testing
+    - action: publish:github:pull-request
+      id: create-pull-request
+      name: Create a pull request
+      input:
+        repoUrl: 'ghes.enginehouse.io?repo=access-test&owner=Roadie-Demo'
+        branchName: ticketNumber-123
+        title: 'Make some changes to the files'
+        description: 'testing user oauth'
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
