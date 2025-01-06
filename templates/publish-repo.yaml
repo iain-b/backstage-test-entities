@@ -16,12 +16,12 @@ spec:
       properties:
         repoHost:
           type: string
-          default: github.com
+          default: ghes.enginehouse.io
           ui:widget: hidden
 
         gitHubOrg:
           type: string
-          default: roadie-demo # TODO: Set your GitHub Org value here.
+          default: Roadie-Demo # TODO: Set your GitHub Org value here.
           ui:widget: hidden
 
         repoName:
