@@ -35,7 +35,7 @@ spec:
       name: Create a pull request
       input:
         repoUrl: 'ghes.enginehouse.io?repo=access-test&owner=ian-link'
-        branchName: ticketNumber-123
+        branchName: ibtest-123
         title: 'Make some changes to the files'
         description: 'testing user oauth'
         token: ${{ secrets.USER_OAUTH_TOKEN }}
