@@ -21,7 +21,7 @@ spec:
 
         gitHubOrg:
           type: string
-          default: iain-b
+          default: roadie-demo # TODO: Set your GitHub Org value here.
           ui:widget: hidden
 
         repoName:
@@ -37,7 +37,7 @@ spec:
         repoVisibility:
           title: Repository Visibility
           type: string
-          default: public
+          default: private
           enum: ['private', 'public']
 
     - title: Component Details # Title of the second step.
