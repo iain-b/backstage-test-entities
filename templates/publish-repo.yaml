@@ -14,6 +14,19 @@ spec:
       required:
         - repoName
       properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+            allowedHosts:
+              - ghes.enginehouse.io
+            allowedOwners:
+              - ian-link
+            allowedRepos:
+              - template-test
         repoHost:
           type: string
           default: ghes.enginehouse.io
@@ -169,6 +182,7 @@ spec:
         defaultBranch: ${{ parameters.defaultBranch }}
         title: Publish new Repository
         description: Publish a new repository for ${{ parameters.name }} to Github.
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
   
   # These are the outputs from the backend steps, and can be displayed in the frontend after completion.
   output:
