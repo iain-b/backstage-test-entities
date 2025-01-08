@@ -21,6 +21,8 @@ spec:
           ui:options:
             requestUserCredentials:
               secretsKey: USER_OAUTH_TOKEN
+              additionalScopes:
+                - admin:org
             allowedHosts:
               - ghes.enginehouse.io
             allowedOwners:
