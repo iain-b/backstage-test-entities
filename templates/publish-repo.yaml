@@ -30,6 +30,7 @@ spec:
               - Roadie-Demo
             allowedRepos:
               - template-test
+              - dne
         repoHost:
           type: string
           default: ghes.enginehouse.io
