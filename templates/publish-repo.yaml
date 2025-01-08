@@ -27,7 +27,7 @@ spec:
             allowedHosts:
               - ghes.enginehouse.io
             allowedOwners:
-              - ian-link
+              - Roadie-Demo
             allowedRepos:
               - template-test
         repoHost:
