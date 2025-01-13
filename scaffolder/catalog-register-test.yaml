@@ -8,7 +8,31 @@ metadata:
 spec:
   owner: iain@roadie.io
   type: service
-  parameters: {}
+# Edit the template parameters below to see how they will render in the scaffolder form UI
+  parameters:
+    - title: Fill in some steps
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          enum:
+            - Y
+            - N
+          ui:widget: radio
+      dependencies:
+        name:
+          allOf:
+            - if:
+                properties:
+                  name:
+                    const: Y
+              then:
+                properties:
+                  enable_refresh:
+                    title: Test
+                    type: string
   steps:
     - action: catalog:register
       id: register-with-catalog
