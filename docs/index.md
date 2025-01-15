@@ -2,10 +2,13 @@
 Ping 4.
 
 ```mermaid
-graph TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Do something]
-    B -->|No| D[Do something else]
-    C --> E[End]
-    D --> E[End]
+mindmap
+  root((Mindmap Root))
+    childA>Idea A]
+      subchildA1[Sub Idea A1]
+      subchildA2[Sub Idea A2]
+    childB((Idea B))
+      subchildB1[Sub Idea B1]
+        subsubchildB1[Details about B1]
+      subchildB2[Sub Idea B2]
 ```
