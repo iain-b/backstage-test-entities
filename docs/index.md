@@ -4,7 +4,7 @@ Ping 4.
 ```mermaid
 mindmap
   root((Mindmap Root))
-    childA>Idea A]
+    childA[Idea A]
       subchildA1[Sub Idea A1]
       subchildA2[Sub Idea A2]
     childB((Idea B))
