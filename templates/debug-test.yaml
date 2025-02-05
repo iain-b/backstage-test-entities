@@ -13,7 +13,7 @@ spec:
       action: debug:log
       input:
         message: hello world
-        listWorkspace: true
+        # listWorkspace: true
         # extra:
         #   asdf: 'asdfasdf'
         #   print: 'me'
