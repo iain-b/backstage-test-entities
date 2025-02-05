@@ -1,0 +1,19 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: debug-test
+  title: test debug log
+spec:
+  owner: group:engineering
+  type: partial
+  parameters: []
+  steps:
+    - id: debug
+      name: debug
+      action: debug:log
+      input:
+        message: hello world
+        listWorkspace: true
+        extra:
+          asdf: 'asdfasdf'
+          print: 'me'
