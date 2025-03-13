@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: nested-component
   description: |
-    A nested component
+    A nested component (update 1)
   tags: ['test', 'test1', 'test2']
   labels:
     test: 'true'
