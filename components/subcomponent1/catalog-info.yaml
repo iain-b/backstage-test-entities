@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: subcomponent-1
   description: |
-    A subcomponent for testing monorepos
+    A subcomponent for testing monorepos ping 1
   annotations:
     github.com/project-slug: iain-b/backstage-test-entities
     github.com/project-readme-path: components/subcomponent1/README.md
