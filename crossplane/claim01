@@ -1,0 +1,14 @@
+apiVersion: ibtest.roadie.io/v1alpha1
+kind: MyBucketClaim
+metadata:
+  annotations:
+    terasky.backstage.io/source-info: >-
+      {"pushToGit":false,"gitLayout":"cluster-scoped","basePath":"temp/default/MyBucketClaim"}
+    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/owner: group:default/roadie-backstage-admin
+    terasky.backstage.io/system: default
+  name: claim-test01
+  namespace: default
+spec:
+  location: EU
+  compositeDeletePolicy: Background
