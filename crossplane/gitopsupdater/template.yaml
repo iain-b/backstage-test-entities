@@ -90,6 +90,12 @@ spec:
         data:
           spec: ${{ parameters.gitOpsManifestUpdater }}
 
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        message: "The value of the variable is: ${{ parameters.gitOpsManifestUpdater }}"
+
     - id: merge-patch
       name: Merge Changes
       action: roadiehq:utils:merge
