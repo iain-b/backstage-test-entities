@@ -128,6 +128,7 @@ spec:
       action: debug:log
       input:
         extra:
+          filepath: ${{ steps['get-filepath'].output.result }}
           formData: ${{ parameters.gitOpsManifestUpdater }}
           serializedContent: ${{ steps['serialize-patch'].output.serialized }}
           fileContent: ${{ steps['read-file'].output.content }}
