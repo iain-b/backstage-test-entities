@@ -127,6 +127,7 @@ spec:
       name: Log Message
       action: debug:log
       input:
+        listWorkspace: true
         extra:
           filepath: ${{ steps['get-filepath'].output.result }}
           formData: ${{ parameters.gitOpsManifestUpdater }}
