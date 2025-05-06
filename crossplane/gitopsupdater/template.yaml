@@ -127,7 +127,9 @@ spec:
       name: Log Message
       action: debug:log
       input:
-        extra: 
+        extra:
+          formData: ${{ parameters.gitOpsManifestUpdater }}
+          serializedContent: ${{ steps['serialize-patch'].output.serialized }}
           fileContent: ${{ steps['read-file'].output.content }}
         
     - id: create-pull-request
