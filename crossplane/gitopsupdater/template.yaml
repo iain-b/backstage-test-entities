@@ -90,12 +90,6 @@ spec:
         data:
           spec: ${{ parameters.gitOpsManifestUpdater }}
 
-    - id: log-message
-      name: Log Message
-      action: debug:log
-      input:
-        extra: ${{ parameters.gitOpsManifestUpdater }}
-
     - id: merge-patch
       name: Merge Changes
       action: roadiehq:utils:merge
@@ -129,6 +123,13 @@ spec:
         expression: |
           "backstage-sourced-update-" & $join($filter($split($, "/"), function($v, $i) { $i >= 7}), "-")
 
+    - id: log-message
+      name: Log Message
+      action: debug:log
+      input:
+        extra: 
+          fileContent: ${{ steps['read-file'].output.content }}
+        
     - id: create-pull-request
       name: create-pull-request
       action: publish:github:pull-request
