@@ -1,0 +1,16 @@
+apiVersion: ibtest.roadie.io/v1alpha1
+kind: MyBucketClaim
+metadata:
+  annotations:
+    terasky.backstage.io/source-info: >-
+      {"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=iain-b&repo=backstage-test-entities","gitLayout":"custom","basePath":"crossplane/"}
+    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/owner: group:default/infrastructure
+    terasky.backstage.io/system: crossplane-test
+    terasky.backstage.io/source-file-url: >-
+      https://github.com/iain-b/backstage-test-entities/blob/main/crossplane//ibtest03.yaml
+  name: ibtest03
+  namespace: crossplane-test
+spec:
+  location: US
+  compositeDeletePolicy: Background
