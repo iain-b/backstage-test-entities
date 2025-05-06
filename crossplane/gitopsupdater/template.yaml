@@ -94,7 +94,7 @@ spec:
       name: Log Message
       action: debug:log
       input:
-        message: "The value of the variable is: ${{ parameters.gitOpsManifestUpdater }}"
+        extra: ${{ parameters.gitOpsManifestUpdater }}
 
     - id: merge-patch
       name: Merge Changes
