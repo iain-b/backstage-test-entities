@@ -1,0 +1,30 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: publish-repo-gitlab-oauth
+  title: Gitlab Oauth
+  description: "Publish a new repository with a catalog-info.yaml file with your software's details. Optionally configure additional integrations and TechDocs to be created and associated at time of registration."
+spec:
+  owner: group:roadie-demo/solutions # TODO: Define who the owner of this template is. This is likely the team who own the relationship with Roadie. e.g. group:customer-name/platform
+  type: service
+  parameters:
+    - title: Repository Details # Title of the first step.
+      required:
+        - repoName
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+            allowedHosts:
+              - gitlab.com
+  steps:
+    - id: publish
+      action: publish:gitlab
+      name: Publish to GitLab
+      input:
+        repoUrl: gitlab.com?repo=ibtest01&owner=iain16-group
+        description: Initialize a git repository
