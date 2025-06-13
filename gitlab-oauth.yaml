@@ -26,4 +26,4 @@ spec:
       input:
         repoUrl: gitlab.com?repo=ibtest01&owner=iain16-group
         description: Initialize a git repository
-        token: USER_OAUTH_TOKEN
+        token: ${{ secrets.USER_OAUTH_TOKEN }}
