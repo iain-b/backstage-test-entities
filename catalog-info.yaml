@@ -1,7 +1,6 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  title: Ibtest 1
   name: ibtest-1
   description: |
     A service for testing Backstage functionality. Configured for GitHub Actions and
